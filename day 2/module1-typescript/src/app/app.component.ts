@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	title = 'module0-cli';
 
-	//TODO: create two new movies with 3 actors and console.log them
+	//TODO: create two new movies with 3 actors and console.log them in the constructor
+
+	constructor() {
+
+	}
 }
