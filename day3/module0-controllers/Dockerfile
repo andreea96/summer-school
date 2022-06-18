@@ -7,18 +7,19 @@ ENV topic "controllers"
 
 WORKDIR /usr/src/app
 
-COPY ./day3/module${module}-${topic}/package*.json ./
+COPY ./package*.json ./
 
 RUN npm install glob rimraf
 
 RUN npm ci --only=development
+RUN npm i nodemon
 
 RUN  npm i -g @nestjs/cli
 
-ADD ./day3/module${module}-${topic}/ .
+ADD . .
 
-RUN npm run build
-CMD [ "node", "dist/main.js" ] 
+RUN nest build
+# CMD [ "node", "dist/main.js" ] 
 
 EXPOSE 3000
 

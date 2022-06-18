@@ -1,20 +1,22 @@
-version: '3.0'
+version: '3'
 
 services:
     api:
         container_name: nestjs_api
         build:
-            context: ../
+            context: .
+            dockerfile: Dockerfile
         ports:
             - 3000:3000
             - 9229:9229
         networks:
             - nesjs-network
         volumes:
-            - ./day3/module0-controllers:/usr/src/app
+            - ./:/usr/src/app
             - /usr/src/app/node_modules
+        # command: nodemon --inspect 0.0.0.0:9229 dist/main.js
         command: npm run start:dev
-        # restart: unless-stopped
+        restart: unless-stopped
     postgres:
         ports:
           - "5432:5432"
