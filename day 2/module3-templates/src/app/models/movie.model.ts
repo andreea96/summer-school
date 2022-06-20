@@ -9,4 +9,5 @@ export class Movie {
 	duration: number;
 	actors: Actor[];
 	isAwarded: boolean;
+	photoUrl: string;
 }

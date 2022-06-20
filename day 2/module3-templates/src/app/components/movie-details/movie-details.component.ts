@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from 'src/app/models/movie.model';
 
 @Component({
@@ -8,8 +8,13 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MovieDetailsComponent implements OnInit {
 	@Input() movie: Movie;
+	@Output() close = new EventEmitter();
 
 	constructor() {}
 
 	ngOnInit(): void {}
+
+	onClose(): void {
+		 this.close.emit();
+	}
 }

@@ -1,12 +1,13 @@
-<!-- <div>Id: {{ movie.id }}</div> -->
-<ul>
-	<li>Name: {{ movie.name }}</li>
-	<li>Released Date: {{ movie.releasedDate }}</li>
-	<li>Director: {{ movie.director }}</li>
-	<li>Rating: {{ movie.rating }}</li>
-	<li>Duration: {{ movie.duration | myTime }}</li>
-	<ol *ngFor="let actor of movie.actors">
-		<!-- <div>Id: {{ actor.id }}</div> -->
-		<li>{{ actor.firstName }} {{ actor.lastName | uppercase }}</li>
-	</ol>
-</ul>
+<div class="movie-details">
+	<button (click)="onClose()">Close</button>
+	<div>Name: {{ movie.name }}</div>
+	<div>Released Date: {{ movie.releasedDate }}</div>
+	<div>Director: {{ movie.director }}</div>
+	<div>Rating: {{ movie.rating }}</div>
+	<div>Duration: {{ movie.duration | myTime }}</div>
+	<div> Cast:
+		<div *ngFor="let actor of movie.actors">
+			<span>{{ actor.firstName }} {{ actor.lastName }}</span>
+		</div>
+	</div>
+</div>

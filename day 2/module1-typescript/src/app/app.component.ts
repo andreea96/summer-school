@@ -11,6 +11,5 @@ export class AppComponent {
 	//TODO: create two new movies with 3 actors and console.log them in the constructor
 
 	constructor() {
-
 	}
 }

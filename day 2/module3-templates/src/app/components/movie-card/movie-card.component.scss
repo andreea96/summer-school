@@ -1,12 +1,12 @@
-.movie-details {
+.movie-card {
     background-color: #fff;
     border: 1px solid black;
     border-radius: 8px;
     box-sizing: border-box;
+    cursor: pointer;
     padding: 8px;
     margin: 8px;
-    transition: border 0.15s ease-in-out;
-    width: 300px;
+    width: 280px;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.10);
 
     font-family: Arial, sans-serif;
