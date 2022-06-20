@@ -11,8 +11,14 @@ export class MoviesService {
   constructor(private http: HttpClient) {
   }
 
+  // To create your own Mock API:
+  // Step 1: Go to https://designer.mocky.io/
+  // Step 2: Click on "New mock"
+  // Step 3: Copy the contents of the file "movies.json" into the "HTTP Response Body" field in mocky.io
+  // Step 4: Click on "Generate my http response"
+  // Step 4: Copy the Mock URL and paste it in this service method
   getMovies(): Observable<Movie[]> {
-    const url = 'https://run.mocky.io/v3/a5d8e16a-8f97-4bea-aa43-b49461db8eb5';
+    const url = 'https://run.mocky.io/v3/5da0ebed-ab27-4f75-a1d9-3db6df7f56f4';
     return this.http.get<Movie[]>(url);
   }
 }
