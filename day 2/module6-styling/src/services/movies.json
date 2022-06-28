@@ -1,0 +1,245 @@
+[
+  {
+    "id": "1",
+    "name": "The Batman",
+    "releasedDate": "2022",
+    "director": "Matt Reeves",
+    "rating": "7.9",
+    "duration": "176",
+    "actors": [
+      {
+        "id": "1",
+        "firstName": "Robert",
+        "lastName": "Pattinson"
+      },
+      {
+        "id": "2",
+        "firstName": "Zoe",
+        "lastName": "Kravitz"
+      },
+      {
+        "id": "3",
+        "firstName": "Jeffrey",
+        "lastName": "Wright"
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Dune",
+    "releasedDate": "2021",
+    "director": "Denis Villeneuve",
+    "rating": "8",
+    "duration": "155",
+    "actors": [
+      {
+        "id": "4",
+        "firstName": "Timothée",
+        "lastName": "Chalamet"
+      },
+      {
+        "id": "5",
+        "firstName": "Rebecca",
+        "lastName": "Ferguson"
+      },
+      {
+        "id": "6",
+        "firstName": "Zendaya",
+        "lastName": ""
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Jurassic World Dominion",
+    "releasedDate": "2022",
+    "director": "Colin Trevorrow",
+    "rating": "6",
+    "duration": "146",
+    "actors": [
+      {
+        "id": "7",
+        "firstName": "Chris",
+        "lastName": "Pratt"
+      },
+      {
+        "id": "8",
+        "firstName": "Bryce",
+        "lastName": "Howard"
+      },
+      {
+        "id": "9",
+        "firstName": "Laura",
+        "lastName": "Dern"
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/JurassicWorldDominion_Poster.jpeg/220px-JurassicWorldDominion_Poster.jpeg"
+  },
+  {
+    "id": "1",
+    "name": "The Batman",
+    "releasedDate": "2022",
+    "director": "Matt Reeves",
+    "rating": "7.9",
+    "duration": "176",
+    "actors": [
+      {
+        "id": "1",
+        "firstName": "Robert",
+        "lastName": "Pattinson"
+      },
+      {
+        "id": "2",
+        "firstName": "Zoe",
+        "lastName": "Kravitz"
+      },
+      {
+        "id": "3",
+        "firstName": "Jeffrey",
+        "lastName": "Wright"
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Dune",
+    "releasedDate": "2021",
+    "director": "Denis Villeneuve",
+    "rating": "8",
+    "duration": "155",
+    "actors": [
+      {
+        "id": "4",
+        "firstName": "Timothée",
+        "lastName": "Chalamet"
+      },
+      {
+        "id": "5",
+        "firstName": "Rebecca",
+        "lastName": "Ferguson"
+      },
+      {
+        "id": "6",
+        "firstName": "Zendaya",
+        "lastName": ""
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Jurassic World Dominion",
+    "releasedDate": "2022",
+    "director": "Colin Trevorrow",
+    "rating": "6",
+    "duration": "146",
+    "actors": [
+      {
+        "id": "7",
+        "firstName": "Chris",
+        "lastName": "Pratt"
+      },
+      {
+        "id": "8",
+        "firstName": "Bryce",
+        "lastName": "Howard"
+      },
+      {
+        "id": "9",
+        "firstName": "Laura",
+        "lastName": "Dern"
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/JurassicWorldDominion_Poster.jpeg/220px-JurassicWorldDominion_Poster.jpeg"
+  },
+  {
+    "id": "1",
+    "name": "The Batman",
+    "releasedDate": "2022",
+    "director": "Matt Reeves",
+    "rating": "7.9",
+    "duration": "176",
+    "actors": [
+      {
+        "id": "1",
+        "firstName": "Robert",
+        "lastName": "Pattinson"
+      },
+      {
+        "id": "2",
+        "firstName": "Zoe",
+        "lastName": "Kravitz"
+      },
+      {
+        "id": "3",
+        "firstName": "Jeffrey",
+        "lastName": "Wright"
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Dune",
+    "releasedDate": "2021",
+    "director": "Denis Villeneuve",
+    "rating": "8",
+    "duration": "155",
+    "actors": [
+      {
+        "id": "4",
+        "firstName": "Timothée",
+        "lastName": "Chalamet"
+      },
+      {
+        "id": "5",
+        "firstName": "Rebecca",
+        "lastName": "Ferguson"
+      },
+      {
+        "id": "6",
+        "firstName": "Zendaya",
+        "lastName": ""
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Jurassic World Dominion",
+    "releasedDate": "2022",
+    "director": "Colin Trevorrow",
+    "rating": "6",
+    "duration": "146",
+    "actors": [
+      {
+        "id": "7",
+        "firstName": "Chris",
+        "lastName": "Pratt"
+      },
+      {
+        "id": "8",
+        "firstName": "Bryce",
+        "lastName": "Howard"
+      },
+      {
+        "id": "9",
+        "firstName": "Laura",
+        "lastName": "Dern"
+      }
+    ],
+    "isAwarded": "false",
+    "photoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/JurassicWorldDominion_Poster.jpeg/220px-JurassicWorldDominion_Poster.jpeg"
+  }
+]

@@ -1,0 +1,11 @@
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 1.5%;
+    width: 17%;
+    min-width: 300px;
+  }
+}

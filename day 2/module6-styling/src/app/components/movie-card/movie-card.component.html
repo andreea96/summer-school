@@ -1,0 +1,17 @@
+<mat-card class="movie-card">
+  <mat-card-header>
+    <mat-card-title>{{ movie.name }}</mat-card-title>
+    <mat-card-subtitle>{{ movie.releasedDate }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="movie-card__content">
+    <img
+      class="movie-card__content-image"
+      mat-card-image
+      [src]="movie.photoUrl"
+      alt=""
+    />
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="openMovie(movie)">Details</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,11 @@
+.movie-card {
+  &__content {
+    height: 350px;
+    overflow: hidden;
+
+    &-image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

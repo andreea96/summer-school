@@ -1,0 +1,13 @@
+.center-text {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.app {
+  &__header {
+    background-color: #93d522;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+}

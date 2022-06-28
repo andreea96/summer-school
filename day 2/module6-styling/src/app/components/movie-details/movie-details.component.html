@@ -1,0 +1,52 @@
+<div class="movie-details">
+  <div class="movie-details__header">
+    <div class="movie-details__header-title">{{ movie.name }}</div>
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="wrapper">
+    <div class="movie-details__content">
+      <div class="movie-details__content-section">
+        <p class="movie-details__content-section-title">General</p>
+      </div>
+      <div class="movie-details__content-item">
+        <div class="movie-details__content-prop">Release Date:</div>
+        <span class="movie-details__content-value">
+          {{ movie.releasedDate }}
+        </span>
+      </div>
+      <div class="movie-details__content-item">
+        <div class="movie-details__content-prop">Director:</div>
+        <span class="movie-details__content-value"> {{ movie.director }} </span>
+      </div>
+      <div class="movie-details__content-item">
+        <div class="movie-details__content-prop">Rating:</div>
+        <span class="movie-details__content-value"> {{ movie.rating }} </span>
+      </div>
+      <div class="movie-details__content-item">
+        <div class="movie-details__content-prop">Duration:</div>
+        <span class="movie-details__content-value">
+          {{ movie.duration | myTime }}
+        </span>
+      </div>
+
+      <div class="movie-details__divider"></div>
+
+      <div class="movie-details__content-section">
+        <p class="movie-details__content-section-title">Cast</p>
+      </div>
+
+      <div
+        class="movie-details__content-item"
+        *ngFor="let actor of movie.actors"
+      >
+        <span>{{ actor.firstName }} {{ actor.lastName }}</span>
+      </div>
+    </div>
+    <div class="divider-vertical"></div>
+    <div class="movie-details__pic">
+      <img [src]="movie.photoUrl" />
+    </div>
+  </div>
+</div>
