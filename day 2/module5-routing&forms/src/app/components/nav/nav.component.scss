@@ -1,6 +1,5 @@
 nav {
-    background-color: blue;
-    color: wheat;
+    background-color: lightblue;
     padding: 10px;
     margin: 0;
 }
@@ -11,5 +10,8 @@ nav {
 
 .nav-item {
     padding: 4px;
-    
+}
+
+.nav-item:hover {
+    cursor: pointer;
 }
