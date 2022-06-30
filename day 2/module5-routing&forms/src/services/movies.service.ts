@@ -1,7 +1,8 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {Movie} from 'src/app/models/movie.model';
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Movie } from 'src/app/models/movie.model';
+import { MovieRating } from 'src/app/models/movie-rating.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,10 @@ export class MoviesService {
   getMovies(): Observable<Movie[]> {
     const url = 'https://run.mocky.io/v3/5da0ebed-ab27-4f75-a1d9-3db6df7f56f4';
     return this.http.get<Movie[]>(url);
+  }
+
+  saveRating(payload: MovieRating): Observable<Movie[]> {
+    const url = 'https://run.mocky.io/v3/c4ad4f42-4d74-4936-8945-5d60b26f6302';
+    return this.http.post<Movie[]>(url, payload);
   }
 }

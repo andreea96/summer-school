@@ -10,10 +10,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { NavComponent } from './components/nav/nav.component';
 import { RoutingModule } from './routing.module';
 import { MovieAddComponent } from './components/movie-add/movie-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, MovieListComponent, MovieDetailsComponent, MyTimePipe, MovieCardComponent, NavComponent, MovieAddComponent],
-  imports: [BrowserModule, HttpClientModule, RoutingModule],
+  imports: [BrowserModule, HttpClientModule, RoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
