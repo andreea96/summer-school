@@ -16,9 +16,13 @@ export class MoviesService {
   // Step 2: Click on "New mock"
   // Step 3: Copy the contents of the file "movies.json" into the "HTTP Response Body" field in mocky.io
   // Step 4: Click on "Generate my http response"
-  // Step 4: Copy the Mock URL and paste it in this service method
+  // Step 5: Copy the Mock URL and use it in the getMovies() service method
+
+  // To make a GET request you need a URL and the GET HTTP verb
+  // Tip: make sure to also use the Movie Type for the response 
+  // in order to match the return type of the method
+  // i.e. this.http.get<Movie[]>()
   getMovies(): Observable<Movie[]> {
-    const url = 'https://run.mocky.io/v3/5da0ebed-ab27-4f75-a1d9-3db6df7f56f4';
-    return this.http.get<Movie[]>(url);
+    
   }
 }

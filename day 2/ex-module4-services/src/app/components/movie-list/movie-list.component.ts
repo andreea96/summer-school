@@ -1,7 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Actor} from 'src/app/models/actor.model';
 import {Movie} from 'src/app/models/movie.model';
-import {MoviesService} from "../../../services/movies.service";
 import {Subscription} from "rxjs";
 
 @Component({
@@ -71,10 +70,13 @@ export class MovieListComponent implements OnInit {
     photoUrl: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg'
   };
 
-  constructor(private moviesService: MoviesService) {
+
+  // Inject service here
+  constructor() {
     this.subscription = this.moviesService.getMovies().subscribe(movies => {
-      this.movieList = movies;
+      // Assign movies to local variable here
     });
+    // Previously we were using local mock data
     // this.movieList = [this.movie1, this.movie2];
   }
 
