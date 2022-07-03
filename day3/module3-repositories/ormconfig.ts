@@ -1,21 +1,13 @@
 import { DataSource } from 'typeorm';
+const path = require('path');
 
-export const databaseProviders = [
-  {
-    provide: 'DATA_SOURCE',
-    useFactory: async () => {
-      const dataSource = new DataSource({
-        type: 'postgres',
-        host: 'postgres',
-        port: 5432,
-        username: 'summer',
-        password: 'school',
-        database: 'imdb',
-        entities: [__dirname + 'dist/**/*.entity{.ts,.js}'],
-        synchronize: true,
-      });
-
-      return dataSource.initialize();
-    },
-  },
-];
+export const dbConnection = new DataSource({
+  type: 'postgres',
+  host: 'postgres',
+  port: 5432,
+  username: 'summer',
+  password: 'school',
+  database: 'imdb',
+  entities: [path.join(__dirname, '**/*.entity.js')],
+  synchronize: true,
+});
