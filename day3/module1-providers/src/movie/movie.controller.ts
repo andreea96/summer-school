@@ -48,17 +48,6 @@ import { Response } from 'express';
       response.send();
     }
   
-    @Put(`:id`)
-    async update(
-      @Param('id') movieId: number,
-      @Body() movieDto: {title: string},
-      @Res() response
-    ) {
-        response.send({
-            status: HttpStatus.NO_CONTENT
-        });
-    }
-  
     @Patch(`:id`)
     async updatePartial(
       @Param('id') movieId: number,
