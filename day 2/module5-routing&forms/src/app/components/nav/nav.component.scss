@@ -1,0 +1,17 @@
+nav {
+    background-color: lightblue;
+    padding: 10px;
+    margin: 0;
+}
+
+.active-route {
+    color: white;
+}
+
+.nav-item {
+    padding: 4px;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}

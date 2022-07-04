@@ -1,0 +1,31 @@
+<h1>Add a new movie rating!</h1>
+
+<form [formGroup]="ratingForm" (ngSubmit)="submit()">
+    <div class="form-item">
+        <label for="selectMvoie">Select movie</label>
+        <br>
+        <select formControlName="movie" id="selectMvoie">
+            <option [value]="" disabled>-- choose a movie --</option>
+            <option *ngFor="let movie of movieList" [value]="movie.id">{{movie.name}}</option>
+        </select>
+
+        <div class="form-error" *ngIf="(movie?.invalid && (movie?.dirty || movie?.touched))">
+            Please select a movie!
+        </div>
+    </div>
+
+    <div class="form-item">
+        <label for="selectRating">Select rating</label>
+        <br>
+        <select formControlName="rating" id="selectRating">
+            <option [value]="" disabled>-- choose a movie --</option>
+            <option *ngFor="let rating of ratings" [value]="rating">{{rating}}*</option>
+        </select>
+
+        <div class="form-error" *ngIf="(rating?.invalid && (rating?.dirty || rating?.touched))">
+            Please select a rating!
+        </div>
+    </div>
+
+    <button [disabled]="ratingForm.invalid" class="submit-button" type="submit">Add rating!</button>
+</form>

@@ -1,0 +1,10 @@
+<div *ngFor="let movie of movieList">
+  <app-movie-card (click)="openDetails(movie)"
+                  [movie]="movie">
+  </app-movie-card>
+</div>
+
+
+<div *ngIf="displayDetails">
+  <app-movie-details (close)="displayDetails = false" [movie]="selectedMovie"></app-movie-details>
+</div>

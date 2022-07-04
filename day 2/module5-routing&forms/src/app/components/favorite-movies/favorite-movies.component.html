@@ -1,0 +1,30 @@
+<h1>Add a new movie rating!</h1>
+
+<form [formGroup]="favoriteForm" (ngSubmit)="submit()">
+    <div class="form-item">
+        <label for="selectMvoie">Select movie</label>
+        <br>
+        <select formControlName="movie" id="selectMvoie">
+            <option [value]="" disabled>-- choose a movie --</option>
+            <option *ngFor="let movie of movieList" [value]="movie.id">{{movie.name}}</option>
+        </select>
+
+        <div class="form-error" *ngIf="(movie?.invalid && (movie?.dirty || movie?.touched))">
+            Please select a movie!
+        </div>
+    </div>
+
+    <div class="form-item">
+        <label for="comment">Write a comment</label>
+        <br>
+        <input formControlName="comment" id="comment" />
+
+        <div class="form-error" *ngIf="(comment?.invalid && (comment?.dirty || comment?.touched))">
+            Please leave a comment (min 8. chars)!
+        </div>
+    </div>
+
+    <button [disabled]="favoriteForm.invalid" class="submit-button" type="submit">Add comment!</button>
+
+    <h1 *ngIf="submitted">Thanks! :)</h1>
+</form>
