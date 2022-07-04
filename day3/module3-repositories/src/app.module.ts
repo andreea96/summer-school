@@ -1,15 +1,14 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MovieModule } from './movie/movie.module';
+import { dbConfig } from '../ormconfig';
 
 @Module({
   imports: [
+    TypeOrmModule.forRoot(dbConfig as TypeOrmModuleOptions),
     MovieModule,
-    TypeOrmModule.forRoot({
-      autoLoadEntities: true,
-    }),
   ],
   controllers: [AppController],
   providers: [AppService],
