@@ -6,6 +6,5 @@
 
 
 <div *ngIf="displayDetails">
-  <!-- Bind to the input and ouptut here -->
-  <app-movie-details></app-movie-details>
+  <app-movie-details [movie]="selectedMovie" (close)="displayDetails = false"></app-movie-details>
 </div>
