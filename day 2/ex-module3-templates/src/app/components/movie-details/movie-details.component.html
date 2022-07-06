@@ -4,7 +4,8 @@
 	<div>Released Date: {{ movie.releasedDate }}</div>
 	<div>Director: {{ movie.director }}</div>
 	<div>Rating: {{ movie.rating }}</div>
-	<div>Duration: {{ movie.duration | myTime }}</div>
+	<!-- Here you should you use your custom pipe -->
+	<div>Duration: {{ movie.duration }}</div>
 	<div> Cast:
 		<div *ngFor="let actor of movie.actors">
 			<span>{{ actor.firstName }} {{ actor.lastName }}</span>
