@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Actor } from './models/actor.model';
-import { Movie } from './models/movie.model';
 
 @Component({
 	selector: 'app-root',
@@ -9,12 +7,7 @@ import { Movie } from './models/movie.model';
 })
 export class AppComponent implements OnInit {
 	title = 'module0-cli';
+	constructor() {}
 
-	//TODO: create two new movies with 3 actors and console.log them
-
-	constructor() {
-	}
-
-	ngOnInit(): void {
-	}
+	ngOnInit(): void {}
 }

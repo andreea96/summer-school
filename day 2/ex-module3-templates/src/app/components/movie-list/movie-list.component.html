@@ -1,11 +1,12 @@
+<!-- TODO: display all the movie titles-->
+<!-- TODO: display all the actors of the first movie -->
+<!-- TODO: Create a button that has the (click) action linked to the function previously created and show the movie title below the button -->
+
 <div *ngFor="let movie of movieList">
-	<app-movie-card (click)="openDetails(movie)"
-                  [movie]="movie">
-  </app-movie-card>
+	<app-movie-card (click)="openDetails(movie)" [movie]="movie"> </app-movie-card>
 </div>
 
-
 <div *ngIf="displayDetails">
-  <!-- Here you should bind to the input and output -->
+	<!-- Here you should bind to the input and output -->
 	<app-movie-details></app-movie-details>
 </div>
