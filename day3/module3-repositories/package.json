@@ -14,7 +14,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "typeorm": "ts-node ./node_modules/typeorm/cli.js",
-    "typeorm:sync": "npm run build && npm run typeorm schema:sync -d ./dist/ormconfig.js",
+    "typeorm:sync": "npm run build && node ./node_modules/typeorm/cli.js schema:sync -d ./dist/ormconfig.js",
     "typeorm:drop": "npm run typeorm schema:drop",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
