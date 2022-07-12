@@ -1,0 +1,58 @@
+$xs: 600px;
+$sm: 960px;
+$md: 1280px;
+$lg: 1440px;
+$xl: 1920px;
+
+@mixin display-flex(
+  $flex-direction,
+  $justify-content: center,
+  $align-items: center,
+  $flex-wrap: wrap
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin respond($media) {
+  @if $media == 'xs' {
+    @media only screen and (max-width: calc($xs - 1px)) {
+      @content;
+    }
+  } @else if $media == 'gt-xs' {
+    @media only screen and (min-width: $xs) {
+      @content;
+    }
+  } @else if $media == 'sm' {
+    @media only screen and (min-width: $xs) and (max-width: calc( $sm - 1px)) {
+      @content;
+    }
+  } @else if $media == 'gt-sm' {
+    @media only screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $media == 'md' {
+    @media only screen and (min-width: $sm) and (max-width: calc( $md - 1px)) {
+      @content;
+    }
+  } @else if $media == 'gt-md' {
+    @media only screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $media == 'lg' {
+    @media only screen and (min-width: $md) and (max-width: calc($lg - 1px)) {
+      @content;
+    }
+  } @else if $media == 'gt-lg' {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $media == 'xl' {
+    @media only screen and (min-width: $lg) {
+      @content;
+    }
+  }
+}

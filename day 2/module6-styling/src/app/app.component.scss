@@ -1,3 +1,6 @@
+@import '~src/stylesheets/_mixins';
+@import '~src/stylesheets/_variables';
+
 .center-text {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -5,9 +8,9 @@
 
 .app {
   &__header {
-    background-color: #93d522;
-    color: white;
-    display: flex;
-    justify-content: center;
+    background-color: $header-color;
+    color: $background-light;
+
+    @include display-flex(row, center, flex-start);
   }
 }

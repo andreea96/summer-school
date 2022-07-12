@@ -1,11 +1,11 @@
+@import '~src/stylesheets/_mixins';
+@import '~src/stylesheets/_variables';
+
 .movie-details {
   &__header {
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    @include display-flex(row, space-between, center);
+    margin-bottom: $gap * 2;
     &-title {
       font-size: 22px;
     }
@@ -14,18 +14,15 @@
   &__divider {
     width: 100%;
     height: 2px;
-    margin: 10px 0;
-    background-color: gray;
+    margin: $gap 0;
+    background-color: $layout-line;
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include display-flex(column, space-between, flex-start);
     &-item {
-      display: flex;
-      flex-direction: row;
-      margin-left: 40px;
+      @include display-flex(row, flex-start, flex-start);
+      margin-left: $gap * 4;
     }
 
     &-section {
@@ -46,19 +43,16 @@
 
   &__pic {
     width: 50%;
-    display: flex;
-    justify-content: center;
+    @include display-flex(row, center, flex-start);
   }
 }
 
 .divider-vertical {
   width: 2px;
-  background-color: gray;
-  margin: 0 20px;
+  background-color: $layout-line;
+  margin: 0 $gap * 2;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include display-flex(row, space-between, flex-start);
 }
