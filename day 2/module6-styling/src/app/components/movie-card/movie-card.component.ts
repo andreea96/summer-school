@@ -21,7 +21,7 @@ export class MovieCardComponent implements OnInit {
       disableClose: true,
       maxHeight: '80vh',
       minHeight: 350,
-      minWidth: 750,
+      minWidth: 200,
       autoFocus: false,
     });
     dialogRef.afterClosed().subscribe();

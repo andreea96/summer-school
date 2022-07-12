@@ -17,6 +17,7 @@ import { Movie } from 'src/app/models/movie.model';
 export class MovieDetailsComponent implements OnInit {
   @Input() movie: Movie;
   @Output() close = new EventEmitter();
+  isDarkMode = false;
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
@@ -30,5 +31,9 @@ export class MovieDetailsComponent implements OnInit {
 
   onClose(): void {
     this.dialogRef.close();
+  }
+
+  switchDialogTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
   }
 }

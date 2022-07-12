@@ -2,6 +2,9 @@
 @import '~src/stylesheets/_variables';
 
 .movie-details {
+  transition: background-color 0.5s ease;
+  padding: $gap * 2;
+
   &__header {
     width: 100%;
     @include display-flex(row, space-between, center);
@@ -19,10 +22,14 @@
   }
 
   &__content {
-    @include display-flex(column, space-between, flex-start);
+    @include display-flex(column, space-between, flex-start, nowrap);
     &-item {
-      @include display-flex(row, flex-start, flex-start);
+      @include display-flex(column, flex-start, flex-start, nowrap);
       margin-left: $gap * 4;
+
+      @include respond('gt-sm') {
+        @include display-flex(row, flex-start, flex-start, nowrap);
+      }
     }
 
     &-section {
@@ -32,18 +39,24 @@
     }
 
     &-prop {
-      width: 170px;
+      width: 130px;
       font-weight: 600;
     }
 
     &-value {
       font-weight: normal;
+      width: 130px;
     }
   }
 
   &__pic {
     width: 50%;
     @include display-flex(row, center, flex-start);
+    display: none;
+
+    @include respond('gt-sm') {
+      display: block;
+    }
   }
 }
 
@@ -54,5 +67,11 @@
 }
 
 .wrapper {
-  @include display-flex(row, space-between, flex-start);
+  @include display-flex(row, space-between, flex-start, nowrap);
+}
+
+.dark {
+  background-color: $dark-theme-background;
+  color: $dark-theme-color;
+  transition: background-color 0.5s ease;
 }

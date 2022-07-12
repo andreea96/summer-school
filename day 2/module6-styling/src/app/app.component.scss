@@ -11,6 +11,6 @@
     background-color: $header-color;
     color: $background-light;
 
-    @include display-flex(row, center, flex-start);
+    @include display-flex(row, center, center);
   }
 }

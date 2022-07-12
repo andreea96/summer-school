@@ -1,6 +1,9 @@
-<div class="movie-details">
+<div class="movie-details" [ngClass]="{ dark: isDarkMode }">
   <div class="movie-details__header">
     <div class="movie-details__header-title">{{ movie.name }}</div>
+    <button mat-icon-button (click)="switchDialogTheme()">
+      <mat-icon>sunny</mat-icon>
+    </button>
     <button mat-icon-button (click)="onClose()">
       <mat-icon>close</mat-icon>
     </button>
