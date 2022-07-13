@@ -9,6 +9,7 @@
     width: 100%;
     @include display-flex(row, space-between, center);
     margin-bottom: $gap * 2;
+
     &-title {
       font-size: 22px;
     }
@@ -23,6 +24,7 @@
 
   &__content {
     @include display-flex(column, space-between, flex-start, nowrap);
+
     &-item {
       @include display-flex(column, flex-start, flex-start, nowrap);
       margin-left: $gap * 4;
@@ -74,4 +76,16 @@
   background-color: $dark-theme-background;
   color: $dark-theme-color;
   transition: background-color 0.5s ease;
+}
+
+.bad-movie {
+  color: $bad-movie;
+}
+
+.ok-movie {
+  color: $ok-movie;
+}
+
+.good-movie {
+  color: $good-movie;
 }

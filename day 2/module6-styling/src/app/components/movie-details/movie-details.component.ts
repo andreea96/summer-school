@@ -27,7 +27,7 @@ export class MovieDetailsComponent implements OnInit {
     this.movie = data.selectedMovie;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onClose(): void {
     this.dialogRef.close();
@@ -35,5 +35,15 @@ export class MovieDetailsComponent implements OnInit {
 
   switchDialogTheme(): void {
     this.isDarkMode = !this.isDarkMode;
+  }
+
+  getColor(duration: number) {
+    if (duration < 150) {
+      return 'green';
+    } else if (duration >= 150 && duration < 170) {
+      return 'orange';
+    } else {
+      return 'red';
+    }
   }
 }

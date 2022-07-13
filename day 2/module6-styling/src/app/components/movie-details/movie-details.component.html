@@ -25,11 +25,14 @@
       </div>
       <div class="movie-details__content-item">
         <div class="movie-details__content-prop">Rating:</div>
-        <span class="movie-details__content-value"> {{ movie.rating }} </span>
+        <span class="movie-details__content-value"
+          [ngClass]="{'bad-movie': movie.rating < 6, 'ok-movie': movie.rating >= 6 && movie.rating < 7, 'good-movie': movie.rating >= 7}">
+          {{
+          movie.rating }} </span>
       </div>
       <div class="movie-details__content-item">
         <div class="movie-details__content-prop">Duration:</div>
-        <span class="movie-details__content-value">
+        <span class="movie-details__content-value" [ngStyle]="{color: getColor(movie.duration)}">
           {{ movie.duration | myTime }}
         </span>
       </div>
@@ -40,10 +43,7 @@
         <p class="movie-details__content-section-title">Cast</p>
       </div>
 
-      <div
-        class="movie-details__content-item"
-        *ngFor="let actor of movie.actors"
-      >
+      <div class="movie-details__content-item" *ngFor="let actor of movie.actors">
         <span>{{ actor.firstName }} {{ actor.lastName }}</span>
       </div>
     </div>
