@@ -43,9 +43,9 @@
         <p class="movie-details__content-section-title">Cast</p>
       </div>
 
-      <div class="movie-details__content-item" *ngFor="let actor of movie.actors">
-        <span>{{ actor.firstName }} {{ actor.lastName }}</span>
-      </div>
+      <mat-chip-list class="movie-details__content-item">
+        <mat-chip *ngFor="let actor of movie.actors">{{ actor.firstName }} {{ actor.lastName }}</mat-chip>
+      </mat-chip-list>
     </div>
     <div class="divider-vertical"></div>
     <div class="movie-details__pic">

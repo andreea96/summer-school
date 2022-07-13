@@ -13,6 +13,7 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MyTimePipe } from './pipes/mytime.pipe';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -31,8 +32,9 @@ import { MyTimePipe } from './pipes/mytime.pipe';
     MatDialogModule,
     MatIconModule,
     MatToolbarModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
