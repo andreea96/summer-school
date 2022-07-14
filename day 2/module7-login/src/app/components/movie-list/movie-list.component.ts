@@ -1,8 +1,10 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {Actor} from 'src/app/models/actor.model';
-import {Movie} from 'src/app/models/movie.model';
-import {MoviesService} from "../../../services/movies.service";
-import {Subscription} from "rxjs";
+import { Component, OnInit, Input } from '@angular/core';
+import { Actor } from 'src/app/models/actor.model';
+import { Movie } from 'src/app/models/movie.model';
+import { MoviesService } from "../../../services/movies.service";
+import { Subscription } from "rxjs";
+import { AuthService } from 'src/app/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -71,7 +73,9 @@ export class MovieListComponent implements OnInit {
     photoUrl: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg'
   };
 
-  constructor(private moviesService: MoviesService) {
+  constructor(private moviesService: MoviesService,
+    private authService: AuthService,
+    private router: Router) {
     this.subscription = this.moviesService.getMovies().subscribe(movies => {
       this.movieList = movies;
     });
@@ -88,5 +92,10 @@ export class MovieListComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  logOut(): void {
+    this.authService.clearToken();
+    this.router.navigate(['login']);
   }
 }

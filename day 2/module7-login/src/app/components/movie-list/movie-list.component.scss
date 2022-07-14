@@ -1,4 +1,6 @@
 @import '~src/stylesheets/_mixins';
+@import '~src/stylesheets/_mixins';
+@import '~src/stylesheets/_variables';
 
 .movie-list {
   @include display-flex(row, flex-start, flex-start, wrap);
@@ -8,4 +10,26 @@
     width: 17%;
     min-width: 300px;
   }
+}
+
+.center-text {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.app {
+  &__header {
+    background-color: $header-color;
+    color: $background-light;
+
+    @include display-flex(row, center, center);
+  }
+
+  &__logout {
+    margin-left: auto;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -14,7 +14,13 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MyTimePipe } from './pipes/mytime.pipe';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { ErrorInterceptor } from './error.interceptor';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { TokenInterceptor } from './token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +28,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MovieDetailsComponent,
     MyTimePipe,
     MovieCardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -32,9 +39,25 @@ import { MatChipsModule } from '@angular/material/chips';
     MatDialogModule,
     MatIconModule,
     MatToolbarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatFormFieldModule,
+    MatCardModule,
+    AppRoutingModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
