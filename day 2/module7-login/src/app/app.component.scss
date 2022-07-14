@@ -1,0 +1,16 @@
+@import '~src/stylesheets/_mixins';
+@import '~src/stylesheets/_variables';
+
+.center-text {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.app {
+  &__header {
+    background-color: $header-color;
+    color: $background-light;
+
+    @include display-flex(row, center, center);
+  }
+}

@@ -1,0 +1,11 @@
+@import '~src/stylesheets/_mixins';
+
+.movie-list {
+  @include display-flex(row, flex-start, flex-start, wrap);
+
+  &__item {
+    margin: 1.5%;
+    width: 17%;
+    min-width: 300px;
+  }
+}
